@@ -3,7 +3,7 @@ Controlling a Hantek PPS 2116A Power Supply using Python 3.
 
 ## Introduction
 
-In www.enertronicsar.com  have a Hantek PPS 2116A Power Supply. Some characteristics of this power supply are: 
+In www.enertronicsar.com, we have a Hantek PPS 2116A Power Supply. Some characteristics of this power supply are: 
 
 
 . Low ripple
@@ -36,7 +36,7 @@ In www.enertronicsar.com  have a Hantek PPS 2116A Power Supply. Some characteris
 . Dimensions: 350mm x 150mm x 210mm
 . Weight: 5.44kg, 12 lbs
 
-We're using it in a testbench of some power electronics componentes that are likely to explode (yes, you read it right), so we decided to use all the instruments remotely. 
+We're using it in a testbench of some power electronics componentes that are likely to explode (yes, you read it right), so we decided to use all the instruments involved in this testbench remotely. 
 
 ## Requirements
 
@@ -48,6 +48,6 @@ We're using it in a testbench of some power electronics componentes that are lik
 
 ## How to use it...
 
-Explore the `Hantek_PPS2116A` class. There you can find some usefull methods to turn on and off, set current and voltage, and some other interesting tools. 
+Explore the `Hantek_PPS2116A` class in `power.py`. There you can find some usefull methods to turn on and off, set current and voltage, and some other interesting tools. 
 
 The `test.py` program is under development. 
