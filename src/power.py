@@ -21,6 +21,11 @@ class Hantek_PPS2116A(object):
         print ('Port: ' + self.ser.name)       # check which port was really used
 
     def set_voltage(self, voltage):
+
+        if voltage > 32:
+            print('Sorry! Max. Voltage value is 32V')
+            quit()
+
         Ch1VoltageSet = 'su' + convert_voltage_to_string(voltage) + str('\r')
         self.ser.write(bytes(Ch1VoltageSet, 'utf-8'))
         time.sleep(.01)
@@ -31,6 +36,10 @@ class Hantek_PPS2116A(object):
             quit()
         
     def set_current(self, current):
+        if current > 5:
+            print('Sorry! Max. Ccurrent value is 5A')
+            quit()
+            
         Ch1AmperageSet = 'si' + convert_current_to_string(current) + str('\r')
         self.ser.write(bytes(Ch1AmperageSet, 'utf-8'))
         time.sleep(.01)
