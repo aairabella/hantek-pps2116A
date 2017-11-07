@@ -4,7 +4,8 @@ from tools import convert_voltage_to_string
 from tools import convert_current_to_string
 
 class Hantek_PPS2116A(object):
-    #__init__(self):
+    def __init__(self):
+        self.init_serial()
 
     # Detectar los Serial Ports
 
@@ -39,7 +40,7 @@ class Hantek_PPS2116A(object):
         if current > 5:
             print('Sorry! Max. Ccurrent value is 5A')
             quit()
-            
+
         Ch1AmperageSet = 'si' + convert_current_to_string(current) + str('\r')
         self.ser.write(bytes(Ch1AmperageSet, 'utf-8'))
         time.sleep(.01)
