@@ -122,3 +122,11 @@ class Hantek_PPS2116A(object):
         time.sleep(.01)
         print('Readout:  %s' % self.serial_port.readline())
         time.sleep(.01)
+
+    def read_device_model(self):
+        self.serial_port.write(b'a' + bytes(str('\r'), 'utf-8'))
+        device_model = self.serial_port.readline()
+        self.serial_port.close()
+        self.serial_port.open()
+
+        return device_model
