@@ -51,3 +51,9 @@ We're using it in a testbench of some power electronics componentes that are lik
 Explore the `Hantek_PPS2116A` class in `power.py`. There you can find some usefull methods to turn on and off, set current and voltage, and some other interesting tools. 
 
 The `test.py` program is under development. 
+
+## Some issues about usb devices
+
+USB to UART devices ( `/dev/ttyUSB0` in our system) are loaded with "rw-rw----" permissions by default. In order to use it properly with this script, you should change this devices permissions to "rwxrwxrwx". You can do that using: `# chmod 777 /dev/ttyUSB0` (Use your device number if different from 0). 
+
+The steps descrived previously has the disadvantage that the permissions are forgoten when the device is unplugged. We found a different aproach in [this website](https://www.silabs.com/community/interface/knowledge-base.entry.html/2016/06/06/fixed_tty_deviceass-XzTf) to make a change permanent. 
