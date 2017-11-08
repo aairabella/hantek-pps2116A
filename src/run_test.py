@@ -20,7 +20,10 @@ if __name__ == '__main__':
     ps.set_voltage(voltage=Ch1_Potential)
     ps.set_current(current=Ch1_Current)
 
-    time.sleep(1)
+    time.sleep(.1)
+
+    print(ps.read_device_model())
+    ps.serial_port.close()
   #  ps.set_on()
 
    # ps.set_off()

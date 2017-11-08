@@ -4,7 +4,7 @@ from power import Hantek_PPS2116A
 
 if __name__ == '__main__':
     
-    print('WARNING: Run test for all the fuckin\' commands')
+    print('WARNING: Run test for all the commands')
     commands = ['rv', 'ra', 'ru', 'ri', 'rs']
     print ('\r')
 
@@ -24,6 +24,11 @@ if __name__ == '__main__':
 
     print(ps.read_measured_current())
 
+    print(ps.read_device_model())
+    
+    ps.serial_port.close()
+
+    ps.serial_port.open()
 
     print(ps.read_set_voltage())
 
