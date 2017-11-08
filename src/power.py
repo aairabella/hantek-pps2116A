@@ -15,11 +15,11 @@ class Hantek_PPS2116A(object):
 
     def init_serial(self):
         self.ser = serial.Serial(
-            port='/dev/ttyUSB0',
+            port='/dev/ttySLAB0',
             baudrate=9600,
             timeout=1
         )
-        print ('Port: ' + self.ser.name)       # check which port was really used
+        #print ('Port: ' + self.ser.name)       # check which port was really used
 
     def set_voltage(self, voltage):
 

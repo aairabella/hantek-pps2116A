@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import time
 from power import Hantek_PPS2116A
 
@@ -8,8 +9,6 @@ if __name__ == '__main__':
     print ('\r')
 
     ps = Hantek_PPS2116A()
-
-    ps.init_serial()
 
     ps.set_voltage(voltage=5.25)
 

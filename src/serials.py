@@ -33,4 +33,4 @@ def serial_ports():
 
 
 if __name__ == '__main__':
-    print(serial_ports()[0])
+    print(serial_ports())
